@@ -63,3 +63,10 @@ DELETE data logout structure:
 Server options:
  - `port`: 8000
  - `host`: localhost
+
+Connect SQL Instance:
+```json
+sudo apt-get update
+sudo apt-get install mysql-client
+mysql -h ip_public_sql -u root -p passwordsql
+```

@@ -1,5 +1,11 @@
 # TemanTB-API
 
+## URL
+url structure:
+```json
+http://localhost:8000
+```
+
 ## Users
 
 | Method | Path          | Response Code | Body | Description         |
@@ -60,13 +66,26 @@ DELETE data logout structure:
 }
 ```
 
-Server options:
- - `port`: 8000
- - `host`: localhost
+
+## CC
+
+Host : 
+```json
+34.123.123
+```
+Password : 
+```json
+budakkorporat12
+```
 
 Connect SQL Instance:
 ```json
 sudo apt-get update
 sudo apt-get install mysql-client
-mysql -h ip_public_sql -u root -p passwordsql
+mysql -h ip_public_sql -u root -p 
+create databse namadatabasenya
 ```
+
+Server options:
+ - `port`: 8000
+ - `host`: localhost

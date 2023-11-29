@@ -20,6 +20,7 @@ POST data users structure:
 {
     "name": "user1",
     "email": "user@gmail.com",
+    "phone": 123123
     "password": "123123",
     "confPassword": "123123"
 }

@@ -88,6 +88,6 @@ create databse namadatabasenya
 ```
 
 Server options:
- - `Databases`: temantb-db
+ - `Databases`: temantb
  - `port`: 8000
  - `host`: localhost

@@ -72,7 +72,7 @@ DELETE data logout structure:
 
 Host : 
 ```json
-34.123.123
+34.101.45.129
 ```
 Password : 
 ```json
@@ -88,5 +88,6 @@ create databse namadatabasenya
 ```
 
 Server options:
+ - `Databases`: temantb-db
  - `port`: 8000
  - `host`: localhost

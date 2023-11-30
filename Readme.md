@@ -3,7 +3,7 @@
 ## URL
 url structure:
 ```json
-http://localhost:8000
+https://apitemantb.et.r.appspot.com/
 ```
 
 ## Users

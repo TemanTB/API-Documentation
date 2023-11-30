@@ -13,7 +13,15 @@ https://apitemantb.et.r.appspot.com/
 | POST   | /users        | 201 | JSON | Create new users |
 | GET    | /users        | 200 | JSON | List data of users    |
 
+POST data users body:
 
+ - `userID`: STRING
+ - `name`: STRING
+ - `email`: STRING
+ - `phone`: INTEGER
+ - `password`: STRING
+ - `refresh_token`: TEXT
+   
 POST data users structure:
 
 ```json

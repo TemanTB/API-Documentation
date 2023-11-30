@@ -72,7 +72,7 @@ DELETE data logout structure:
 
 Host : 
 ```json
-34.101.45.129
+35.238.118.45
 ```
 Password : 
 ```json

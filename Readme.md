@@ -3,7 +3,7 @@
 ## URL
 url structure:
 ```json
-https://apitemantb.et.r.appspot.com/
+https://temantb-api.et.r.appspot.com/
 ```
 
 ## Users
@@ -80,7 +80,7 @@ DELETE data logout structure:
 
 Host : 
 ```json
-35.238.118.45
+34.128.114.61
 ```
 Password : 
 ```json
@@ -96,6 +96,6 @@ create databse namadatabasenya
 ```
 
 Server options:
- - `Databases`: temantb
+ - `Databases`: dbtemantb
  - `port`: 8000
  - `host`: localhost

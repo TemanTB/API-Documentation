@@ -192,6 +192,9 @@ GET all data schedule response :
 ## Authorization:
  - `Bearer`: token
 
+POST data schedule by user id response:
+
+
 ```json
 {
     "data": [

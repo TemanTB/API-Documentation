@@ -56,8 +56,6 @@ GET data users Response:
 </br>
 </br>
 </br>
-</br>
-</br>
 
 ## Login
 

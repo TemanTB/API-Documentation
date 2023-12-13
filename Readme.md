@@ -8,11 +8,6 @@ https://temantb-api.et.r.appspot.com/
 
 ## Users
 
-| Method | Path          | Response Code | Body | Description         |
-| ------ |---------------| ------------- | ---- |---------------------|
-| POST   | /users        | 201 | JSON | Create new users |
-| GET    | /users        | 200 | JSON | List data of users    |
-
 POST data users body:
 
  - `userID`: STRING / UUID
@@ -21,6 +16,11 @@ POST data users body:
  - `phone`: STRING
  - `password`: STRING
  - `refresh_token`: TEXT
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| POST   | /users        | 201 | JSON | Create new users |
+
    
 POST data users structure:
 
@@ -28,13 +28,17 @@ POST data users structure:
 {
     "name": "user1",
     "email": "user@gmail.com",
-    "phone": 123123
+    "phone": "0812312312",
     "password": "123123",
     "confPassword": "123123"
 }
 ```
 
-GET data users structure:
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /users        | 200 | JSON | List data of users    |
+
+GET data users Response:
 
 ```json
 {
@@ -48,6 +52,12 @@ GET data users structure:
     "message": "success get all data"
 }
 ```
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 ## Login
 
@@ -63,6 +73,21 @@ POST data login structure:
     "password": "123123"
 }
 ```
+Response Login :
+```json
+{
+    "loginResult": {
+        "userId": "84a2a107-dc18-4606-a2b5-a529a06995d8",
+        "name": "chandra halim",
+        "token": <token>
+    }
+}
+```
+
+</br>
+</br>
+</br>
+</br>
 
 ## Logout
 
@@ -70,68 +95,85 @@ POST data login structure:
 | ------ |---------------| ------------- | ---- |---------------------|
 | DELETE   | /logout     | 200 | JSON | delete token login|
 
-DELETE data logout structure:
+## Authorization:
+ - `Bearer`: token
+
+DELETE data logout Response:
 
 ```json
 {
    OK
 }
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## Schedule
-
-| Method | Path          | Response Code | Body | Description         |
-| ------ |---------------| ------------- | ---- |---------------------|
-| POST   | /schedule        | 201 | JSON | Create new users |
-| GET    | /schedule        | 200 | JSON | List data of users    |
-| GET    | /schedule/userID        | 200 | JSON | List data of users    |
-| DELETE    | /schedule/delete/scheduleID        | 200 | JSON | List data of users    |
-| PUT    | /schedule/edit/scheduleID        | 200 | JSON | List data of users    |
 
 POST data schedule body:
 
  - `scheduleID`: STRING / UUID
- - `title`: STRING
+ - `medicineName`: STRING
  - `description`: TEXT
  - `hour`: TIME
  - `userID`: STRING / UUID
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| POST   | /schedule        | 201 | JSON | Create new users |
+
+## Authorization:
+ - `Bearer`: token
 
 POST data schedule structure:
 
 ```json
 {
-    "title": "lagi",
-    "description": "ini adalah lagi",
+    "medicineName": "nama obat",
+    "description": "keterangan",
     "hour": "12:31:30"
 }
 ```
 
-GET all data schedule structure:
+</br>
+</br>
+
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /schedule        | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+GET all data schedule response :
 
 ```json
 {
     "data": [
         {
-            "scheduleID": "0017ac03-43dd-46d8-b8a2-b3b2c17ddd20",
+            "scheduleID": "example user id 1",
             "title": "example title 1",
             "description": "example title 1",
             "hour": "12:31:30",
-            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee",
+            "userID": "example user id 1",
             "user": {
                 "name": "user1",
-                "email": "user@gmail.com",
+                "email": "user1@gmail.com",
                 "phone": "081231312"
             }
         },
          {
-            "scheduleID": "0017ac03-43dd-46d8-b8a2-b3b2c17ddd20",
-            "title": "example title 2",
+            "scheduleID": "example user id 2",
+            "medicineName": "example medicineName 2",
             "description": "example title 2",
             "hour": "12:31:30",
-            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee",
+            "userID": "example user id 2",
             "user": {
                 "name": "user2",
-                "email": "user@gmai2.com",
+                "email": "user2@gmai2.com",
                 "phone": "081231312"
             }
         },
@@ -140,29 +182,79 @@ GET all data schedule structure:
 }
 ```
 
-GET data schedule by user id structure:
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /schedule/userID        | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
 
 ```json
 {
     "data": [
         {
             "scheduleID": "0017ac03-43dd-46d8-b8a2-b3b2c17ddd20",
-            "title": "example title 1",
-            "description": "example title 1",
+            "medicineName": "example medicineName 1",
+            "description": "example description 1",
             "hour": "12:31:30",
-            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee"
+            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee",
+            "user": {
+                "name": "user",
+                "email": "user@gmail.com",
+                "phone": "081231312"
+            }
         },
-        {
-            "scheduleID": "4b9fd589-35a0-46f6-ab88-2ed35bf058e9",
-            "title": "example title 2",
-            "description": "example title 2",
+         {
+            "scheduleID": "0017ac03-43dd-46d8-b8a2-b3b2c17ddd20",
+            "title": "example medicineName 2",
+            "description": "example description 2",
             "hour": "12:31:30",
-            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee"
+            "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee",
+            "user": {
+                "name": "user",
+                "email": "user@gmail.com",
+                "phone": "081231312"
+            }
         },
     ],
-    "message": "Successfully retrieved schedule data"
+    "message": "success get all schedules"
 }
 ```
+
+</br>
+</br>
+
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| PUT    | /schedule/edit/scheduleID        | 201 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+PUT data schedule by schedule id structure:
+
+```json
+{
+    "medicineName": "edit medicineName 1",
+    "description": "description edit 1",
+    "hour": "12:00:00"
+}
+```
+
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| DELETE    | /schedule/delete/scheduleID        | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
 
 DELETE data schedule by schedule id structure:
 
@@ -170,7 +262,7 @@ DELETE data schedule by schedule id structure:
 {
     "data": {
         "scheduleID": "4b9fd589-35a0-46f6-ab88-2ed35bf058e9",
-        "title": "lagi",
+        "medicineName": "lagi",
         "description": "ini adalah lagi",
         "hour": "12:31:30",
         "userID": "19ccdba0-8654-4f34-b4d3-40f1eea3eeee",
@@ -180,15 +272,10 @@ DELETE data schedule by schedule id structure:
 }
 ```
 
-PUT data schedule by schedule id structure:
-
-```json
-{
-    "title": "edit titile 1",
-    "description": "description edit 1",
-    "hour": "12:00:00"
-}
-```
+</br>
+</br>
+</br>
+</br>
 
 ## CC
 

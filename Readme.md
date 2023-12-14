@@ -114,8 +114,8 @@ POST data schedule body:
 
  - `scheduleID`: STRING / UUID
  - `medicineName`: STRING
- - `description`: TEXT
- - `hour`: TIME
+ - `description`: STRING
+ - `hour`: STRING
  - `userID`: STRING / UUID
 
 | Method | Path          | Response Code | Body | Description         |
@@ -295,7 +295,7 @@ IP public (0.0.0.0/0)
 sudo apt-get update
 sudo apt-get install mysql-client
 mysql -h ip_public_sql -u root -p 
-create databse namadatabasenya
+create database namadatabasenya
 ```
 
 Server options:

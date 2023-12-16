@@ -146,7 +146,7 @@ POST data schedule structure:
 ## Authorization:
  - `Bearer`: token
 
-GET data schedule id structure :
+GET all data schedule structure :
 
 ```json
 {
@@ -190,6 +190,8 @@ GET data schedule id structure :
 ## Authorization:
  - `Bearer`: token
 
+GET data schedule id structure :
+
 ```json
 {
     "data": [
@@ -211,8 +213,6 @@ GET data schedule id structure :
 
 </br>
 </br>
-
-GET all data schedule response :
 
 | Method | Path          | Response Code | Body | Description         |
 | ------ |---------------| ------------- | ---- |---------------------|

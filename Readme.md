@@ -146,7 +146,7 @@ POST data schedule structure:
 ## Authorization:
  - `Bearer`: token
 
-GET all data schedule response :
+GET data schedule id structure :
 
 ```json
 {

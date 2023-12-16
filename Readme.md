@@ -185,6 +185,37 @@ GET all data schedule response :
 
 | Method | Path          | Response Code | Body | Description         |
 | ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /schedule/scheduleID        | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+```json
+{
+    "data": [
+        {
+            "scheduleID": "cca5263f-778c-4010-bdab-b0aaw1eb1aed",
+            "medicineName": "nama obat",
+            "description": "deskripsi obat",
+            "hour": "12:31:30",
+            "userID": "84502107-303d-4f2b-8dd6-2e78517bd8a6",
+            "createdAt": "2023-12-16T18:08:01.000Z",
+            "updatedAt": "2023-12-16T18:08:01.000Z",
+            "userUserID": null
+        }
+    ],
+    "message": "success get schedule"
+}
+}
+```
+
+</br>
+</br>
+
+GET all data schedule response :
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
 | GET    | /schedule/userID        | 200 | JSON | List data of users    |
 
 ## Authorization:

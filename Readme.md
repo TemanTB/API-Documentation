@@ -3,7 +3,7 @@
 ## URL
 url structure:
 ```json
-https://temantb-api.et.r.appspot.com/
+https://apitemantb-5vmozaariq-ts.a.run.app
 ```
 
 ## Users
@@ -309,12 +309,173 @@ DELETE data schedule by schedule id structure:
 </br>
 </br>
 
-url structure:
+## Health Check
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /health       | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+GET all data health structure:
+
 ```json
-https://temantb-api.et.r.appspot.com/
+{
+    "data": [
+        {
+            "healthId": "f780dc7f-b9df-4488-8c28-b2e336034e4f",
+            "weeks": 1,
+            "date": "2023-12-18T00:00:00.000Z",
+            "nextDate": "2024-01-01T00:00:00.000Z",
+            "point": 5,
+            "alert": "Please put your health back on 2024-01-01",
+            "description": "kondisi saya membaik",
+            "average": "Membaik",
+            "images": "https://storage.googleapis.com/temantb-api.appspot.com/up.png",
+            "time": "2023-12-18T14:25:56.000Z",
+            "userID": "45ad6f65-abbd-44d5-8226-c316f53fe08b",
+            "userUserID": null
+        }
+    ],
+    "message": "success get all health check"
+}
 ```
 
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| delete    | /health/delete/healthId       | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+DELETE data health by health id structure:
+
+```json
+{
+    "message": "delete data success"
+}
+```
+
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /health/healthid/healthId       | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+GET data health by health id structure:
+
+```json
+{
+    "data": {
+        "healthId": "25e5ec41-2285-4da2-acf4-caa8068ce4ff",
+        "weeks": 2,
+        "date": "2023-12-18T00:00:00.000Z",
+        "nextDate": "2024-01-01T00:00:00.000Z",
+        "point": 6,
+        "alert": "Please put your health back on 2024-01-01",
+        "description": "kondisi saya membaik",
+        "average": "Membaik",
+        "images": "https://storage.googleapis.com/temantb-api.appspot.com/up.png",
+        "time": "2023-12-18T14:26:27.000Z",
+        "userID": "45ad6f65-abbd-44d5-8226-c316f53fe08b",
+        "userUserID": null
+    },
+    "message": "success get data by id"
+}
+```
+
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /health/alert/userID       | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+GET data alert health by user id structure:
+
+```json
+{
+    "data": {
+        "alert": "Please put your health back on 2024-01-01"
+    },
+    "message": "success get meesage next date"
+}
+```
+
+</br>
+</br>
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| GET    | /health/point/userID       | 200 | JSON | List data of users    |
+
+## Authorization:
+ - `Bearer`: token
+
+
+GET data health by user id structure:
+
+```json
+{
+    "data": [
+        {
+            "date": "2023-12-18",
+            "point": 5
+        },
+        {
+            "date": "2023-12-18",
+            "point": 6
+        }
+    ],
+    "message": "success get health by users"
+}
+```
+
+</br>
+</br>
+
+
+| Method | Path          | Response Code | Body | Description         |
+| ------ |---------------| ------------- | ---- |---------------------|
+| POST    | /health        | 201 | JSON | post data of health    |
+
+## Authorization:
+ - `Bearer`: token
+
+url structure:
+```json
+https://mlapi-5vmozaariq-ts.a.run.app
+```
+```json
+{
+    "data": "kesehatan penyakit penderita"
+}
+```
+
+</br>
+</br>
+
+
+
 ## CC
+
+## Authorization:
+ - `Bearer`: token
 
 Host : 
 ```json

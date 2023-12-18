@@ -309,6 +309,11 @@ DELETE data schedule by schedule id structure:
 </br>
 </br>
 
+url structure:
+```json
+https://temantb-api.et.r.appspot.com/
+```
+
 ## CC
 
 Host : 

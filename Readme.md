@@ -216,7 +216,7 @@ GET data schedule id structure :
 
 | Method | Path          | Response Code | Body | Description         |
 | ------ |---------------| ------------- | ---- |---------------------|
-| GET    | /schedule/userID        | 200 | JSON | List data of users    |
+| GET    | /schedule/users/userID        | 200 | JSON | List data of users    |
 
 ## Authorization:
  - `Bearer`: token

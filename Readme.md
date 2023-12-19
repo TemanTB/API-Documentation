@@ -463,7 +463,7 @@ https://mlapi-5vmozaariq-ts.a.run.app
 ```
 ```json
 {
-    "data": "kesehatan penyakit penderita"
+    "description": "kesehatan penyakit penderita"
 }
 ```
 

@@ -455,6 +455,44 @@
 <br>
 <br>
 
+<h2>POST Data Health</h2>
+
+- **POST Data Health**
+- URL: `https://apiml-5vmozaariq-ts.a.run.app/health`
+- Method: `POST`
+- **Headers**: <br>
+          1. `Authorization`: Bearer `<token>`
+- **Request Body** : <br>
+        1. description : `STRING` <br>
+- **Request Dummy Data Body** : <br>
+```json
+{
+        "description": "input user health",
+}
+```
+- **Response** : <br>
+```json
+{
+    "data": {
+        "current_point": 3,
+        "description": "saya sehat",
+        "ml_predict": 0
+    },
+    "message": "Data inserted successfully",
+    "status": {
+        "code": 201,
+        "message": "success post data"
+    }
+}
+```
+
+<br>
+<br>
+
+
+
+
+
 
 
 

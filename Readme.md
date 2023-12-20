@@ -393,6 +393,37 @@
 <br>
 <br>
 
+<h2>GET Data Health users By Health Id</h2>
+
+- **GET Data Detail Health**
+- URL: `/healthid/:healthId`
+- Method: `GET`
+- **Headers**: <br>
+          1. `Authorization`: Bearer `<token>`
+- **Response** : <br>
+```json
+{
+    "data": [
+        {
+            "healthId": "healthId user 1",
+            "weeks": 3,
+            "date": "2023-12-19T00:00:00.000Z",
+            "nextDate": "2024-01-02T00:00:00.000Z",
+            "point": 4,
+            "alert": "Please put your health back on 2024-01-02",
+            "description": "saya sehat",
+            "average": "Membaik",
+            "images": "https://storage.googleapis.com/temantb-api.appspot.com/up.png",
+            "time": "2023-12-19T22:37:28.000Z",
+            "userId": "user id 1",
+            "userUserId": null
+        }
+}
+```
+
+<br>
+<br>
+
 <h2>DELETE Data Health users By Health Id</h2>
 
 - **DELETE Data Health**
@@ -494,30 +525,3 @@
 
 
 
-
-
-## CC
-
-
-Host : 
-```json
-34.128.114.61
-```
-Password : 
-```json
-budakkorporat12
-```
-
-Connect SQL Instance:
-```json
-IP public (0.0.0.0/0)
-sudo apt-get update
-sudo apt-get install mysql-client
-mysql -h ip_public_sql -u root -p 
-create database namadatabasenya
-```
-
-Server options:
- - `Databases`: dbtemantb
- - `port`: 8000
- - `host`: localhost
